@@ -44,7 +44,7 @@ class BIT:
         return x & (-x)
 
     def update(self, i: int, x: int):
-        self.add(i, x - self.query(i))
+        self.add(i, x - (self.query(i) - self.query(i - 1)))
 
     def add(self, i: int, x: int):
         while i <= self.n:
@@ -72,7 +72,7 @@ class RangeUpdateBIT:
         return x & (-x)
 
     def update(self, i: int, x: int):
-        self.add(i, x - self.query(i))
+        self.add(i, x - (self.query(i) - self.query(i - 1)))
 
     def add(self, i: int, x: int):
         while i <= self.n:
@@ -102,7 +102,7 @@ class RangeQueryUpdateBIT:
         return x & (-x)
 
     def update(self, i: int, x: int):
-        self.add(i, x - self.query(i))
+        self.add(i, x - (self.query(i) - self.query(i - 1)))
 
     def add(self, i: int, x: int):
         t = i
