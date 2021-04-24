@@ -34,8 +34,9 @@ BIT2D = 二维树状数组
 参考文献：https://www.cnblogs.com/xenny/p/9739600.html
 
 样例：
-LeetCode0307 = 标准树状数组
-LeetCode0308 = 二维树状数组
+LeetCode 0307 = 标准树状数组
+LeetCode 0308 = 二维树状数组
+LeetCode 0315 = 标准树状数组
 """
 
 

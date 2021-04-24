@@ -30,11 +30,13 @@ class DSU:
         self.size = [1] * n
 
     def find(self, i: int):
+        """查询i所属的连通分支"""
         if self.array[i] != i:
             self.array[i] = self.find(self.array[i])
         return self.array[i]
 
     def union(self, i: int, j: int):
+        """合并i和j的连通分支"""
         i = self.find(i)
         j = self.find(j)
         if self.size[i] >= self.size[j]:
@@ -44,6 +46,14 @@ class DSU:
             self.array[i] = j
             self.size[j] += self.size[i]
 
-    def arrange(self):
+    def group_num(self):
+        """计算当前的连通分支数量"""
+        group = set()
         for i in range(len(self.array)):
-            self.find(i)
+            if self.array[i] not in group and self.find(i) not in group:
+                group.add(self.find(i))
+        return len(group)
+
+    def __repr__(self):
+        return str(len(self.array)) + ":" + str(self.array)
+
