@@ -1,7 +1,7 @@
 # --*-- coding:GBK -- * --
 
 
-"""线段树 (Segment Tree)
+"""线段树 (Segment Tree) (Segment Tree)
 
 核心思想（Lazy思想）：对整个结点进行的操作，先在结点上做标记，而并非真正执行，直到根据查询操作的需要分成两部分
 
